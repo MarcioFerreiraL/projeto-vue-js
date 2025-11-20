@@ -1,12 +1,12 @@
 <template>
-    <Teste class="teste">
-        teste
-    </Teste>
+    <div class="teste">
+        testando componentes
+    </div>
 </template>
 
 <script>
     export default {
-
+        name: 'TesteComponent'
     }
 </script>
 

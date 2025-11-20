@@ -1,6 +1,13 @@
 <template>
   <Teste />
+  <div v-show="ver">
+    Nome: {{ name }}
+  </div>
 
+  <div v-if="lastname === 'Lima'">
+    Sobrenome: {{ lastname }}
+  </div>
+  
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
@@ -14,6 +21,14 @@ export default {
   components: {
     HelloWorld,
     Teste
+  },
+  data() {
+    return {
+      ver: true,
+      name: 'Marcio',
+      lastname: 'Lima'
+    }
+    
   }
 }
 </script>
