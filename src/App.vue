@@ -1,32 +1,21 @@
 <template>
-  <Teste />
-  <div v-show="ver">
-    Nome: {{ name }}
+  <div :class="loginStyle">
+    Login
   </div>
 
-  <div v-if="lastname === 'Lima'">
-    Sobrenome: {{ lastname }}
-  </div>
-  
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <formularioLogin />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Teste from './components/Teste.vue'
-
+import formularioLogin from './components/formularioLogin.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    Teste
+    formularioLogin,
   },
   data() {
     return {
-      ver: true,
-      name: 'Marcio',
-      lastname: 'Lima'
+      loginStyle: 'loginStyle',
     }
     
   }
@@ -42,4 +31,12 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.loginStyle {
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 20px;
+}
+
+
 </style>
